@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cryptocurrency Form</title>
+	<link href="theme/jquery-ui.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+	
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- jQuery UI functionality -->
+<script type="text/javascript" src="theme/jquery-ui.js"></script>
+    <script src="theme/external/jquery/jquery.js"></script>
+    <script type="text/javascript" src="validation/dist/jquery.validate.js"></script>
+    <script src="js/form.js"></script>
+    <script>
+    $( function() {
+    $( "#spinner" ).spinner({
+      step: 0.000001,
+      numberFormat: "n"
+    });
+ 
+    $( "#culture" ).on( "change", function() {
+      var current = $( "#spinner" ).spinner( "value" );
+      Globalize.culture( $(this).val() );
+      $( "#spinner" ).spinner( "value", current );
+    });
+  } );
+    </script>
+    
+</head>
+<body style="background:lightGrey">
+<div>
+<h1>CryptoBooks!</h1>
+
+<div class="ui-widget">
+	<p>Learn and track your cryptocurrency here!</p>
+</div>
+
+<h1>Crypto Form:</h1>
+<form id="cryptoForm">
+<fieldset>
+    <h1>Personal Info</h1>
+    <p>
+        Name: <input id="name" placeholder="Full Name" type="text" required autofocus><br>
+    Email: <input id="email" placeholder="email@example.com" type="email"><br>
+    Password: <input id="password" placeholder="password" type="password"><br>
+    Telephone Number: <input id="tele" title="Telephone Number" placeholder="1(888)867-5309" type="tel"><br>
+    
+        
+    </p>
+    <!-- Accordion -->
+    <h2 class="demoHeaders">Coin Info</h2>
+    <div id="accordion">
+        <h3>Bitcoin</h3>
+        <div>Bitcoin is the first cryptocurrency made. Made by the mysterioys figure Satoshi Nakamoto, this brand new and exciting idea sparked what may be a revolution.</div>
+        <h3>Litecoin</h3>
+        <div>Litecoin is a version of Bitcoin that aims to be cheaper, faster and more agile sort of companion to Bitcoin (made about 2-3 years after Bitcoin).</div>
+        <h3>Ethereum</h3>
+        <div>A rather young cryptocurrency that is part of the "new generation" of cryptocurrency. Ethereum allows for the building of apps on itself as well as other uses outside of purchasing things.</div>
+    </div>
+    
+    <input id="checkbox" type="checkbox" name="checks" value="learned something"> I learned from this website!<br>
+    <input id="checkbox2" type="checkbox" name="checks" value="want to tell a friend"> I want to tell a friend about this websited!<br>
+    
+    <!-- Datepicker -->
+    <h2 class="demoHeaders">Purchase Date</h2>
+    <div id="datepicker"></div>
+
+
+    
+    <!-- selector -->
+    <h2 class="demoHeaders">Coin</h2>
+    <select id="selectmenu">
+        <option selected="selected">Bitcoin</option>
+        <option>Litecoin</option>
+        <option>Ethereum</option>
+    </select>
+
+
+        <!-- Autocomplete -->
+    <h2 class="demoHeaders">Transaction Type</h2>
+    <div>
+        <input id="autocomplete" title="type &quot;a&quot;">
+    </div>
+
+
+    <!-- Spinner -->
+    <h2 class="demoHeaders">Amount Purchased</h2>
+    <input type="number" step="0.00000001" value="0.00000000" id="spinner"><br>
+
+    <!-- Checkboxradio -->
+<h2 class="demoHeaders">I would fill this form out again...</h2>
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radios" value="YES!"><label for="radio1">YES!</label>
+		<input type="radio" id="radio2" name="radios" value="Maybe" checked="checked"><label for="radio2">Maybe</label>
+		<input type="radio" id="radio3" value="Probably Not" name="radios"><label for="radio3">Probably not</label>
+    </div>
+
+
+
+</fieldset>
+    
+    <fieldset>
+    <!-- Button -->
+    <button id="submit" value="button" type="submit">Submit</button>   
+    
+    <button id="reset" value="Reset" type="reset">Reset</button><br><br>
+    </fieldset>
+    
+</form>
+    </div>
+    <div>
+        <h1>Output</h1>
+        <p id="result"></p>
+    </div>
+    <script type="text/javascript" src="validation/dist/jquery.validate.js"></script>
+<script src="js/form.js"></script>
+<script src="theme/jquery-ui.js"></script>
+
+</body>
+</html>

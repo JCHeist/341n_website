@@ -1,0 +1,140 @@
+<!doctype html>
+
+<!--
+TITLE: finalHome.html
+AUTHOR: Jasper Heist
+PURPOSE: Class Index Page to Host Lab Work for N341
+NOTE: Based on template provided by instructor
+ORIGINALLY CREATED ON: 01/12/2018
+LAST MODIFIED ON: 04/24/2018
+LAST MODIFIED BY: Jasper Heist
+MODIFICATION HISTORY: 
+04/24/2019: Create date
+
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    
+<title>Jasper Heist's Final Page</title>
+
+<!-- This css provides the colors and formatting for the page.
+     In this class, we will keep our css in an external file.
+     This internal css is included to keep the initial process simple. -->
+<style>
+*{
+	margin:0 0 6px;
+}
+header{
+	text-align:left;
+	color:white;
+	background-color:orange;
+	padding:30px 150px;
+}
+body {
+	background-color: #CCE0DF;	/*	Use the Color Picker to find the hex code of your favorite color
+									http://www.w3schools.com/tags/ref_colorpicker.asp */
+}
+body p {
+	padding-left: 2em;
+}
+
+li, li a{						/* Define the formatting for the links to the labs */
+	list-style: none;
+	background-color: orangered;
+	text-align: center;
+	color: white;
+	border-radius: 3px;
+	padding: 2px;
+    text-align: center
+}
+
+h2{
+	width: 100%;
+	color: #1E6E68;
+	line-height: 40px;
+}
+h3{
+	color: #1E6E68;
+	line-height: 30px;
+	text-align: center;
+}
+
+#assignments{			/* Define the formatting for the <div id="asssignments"> box */
+	width: 720px;
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	min-height: 300px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: white;
+}
+#assignments ul {
+	float:left;
+	width: 300px;
+}
+
+hr{						/* Define the formatting for the <hr /> line between "Course Work" and lab links */
+	margin: 10px 0;
+	width: 100%;
+	float: left;
+}
+</style>
+<!-- End of internal css -->
+<!-- 
+	To move the css to an external file: 
+	1. copy everything that is between the <style> tag and the </style> tag
+	2. paste it to a new text file & delete the <style> tags.
+	3. save the file with a unique file name. You can call it myFavoriteStyle.css
+		a. You could save it in the same folder with your html file. 
+			If you do, be sure to include the following link in the <head> of your html file:
+			<link rel="stylesheet" type="text/css" href="myFavoriteStyle.css">
+		b. If you want to put your css file into its own css folder, follow these steps:
+			- Create a folder called css inside your main folder
+			- Save your myFavoriteStyle.css to the new css folder
+			- include the following link in the <head> of your html file:
+			<link rel="stylesheet" type="text/css" href="css/myFavoriteStyle.css">
+	4. Test your html page to be sure it is linking to the css page
+		Do the colors and formatting look correct?
+	5. For future web pages, just include the same link to get the desired formatting. Changing the css file
+		modifies every page that uses that file.
+	6. Feel free to delete "Josephina Student" and the instructional comments.
+	7. Also please do what you like to customize the page to your own liking. In this class, I want to encourage creativity.
+ -->
+</head>
+
+<body>
+	<header>
+		<h1>CSCI N341 Final Project</h1>
+		<p>By Jasper Heist</p>
+    </header>
+	<div id="assignments">
+		<h3> Final Work </h3>
+		<hr/> <!-- Draw a horizontal line with formatting defined by css -->
+ 
+		<ul>  <!-- Beginning of unordered list -->
+		
+			<li>
+                <a href="form.html">Form Project</a>
+            </li>
+            <li>
+                <a href="formScrape.html">Form Scrape Project</a>
+            </li>
+            <li>
+                <a href="formSimpleValidation.html">Form Validation Project</a>
+            </li>
+            <li>
+                <a href="customFormVal.html">Custom Validation</a>
+            </li>
+            <li>
+                <a href="testPageFinal.xlsx">Test Page!</a>
+            </li>
+            <li>
+                <a href="finalRelease.html">Final Release</a>
+            </li>
+		</ul>  <!-- End of unordered list -->
+	 
+	</div><!-- end div id="assignments" -->
+</body>
+</html>

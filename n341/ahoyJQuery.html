@@ -1,0 +1,40 @@
+<!doctype html>
+
+<!--
+      Filename: ahoyJQuery.html
+    Written by: Jasper Heist
+    Purpose: Learning jQuery
+    Date: 3/27/2019
+    Modification History: 
+    3/27/19 - date started
+-->
+
+
+<html lang="en">
+    <head>
+    
+        <title>jQuery Development Environment Setup</title>
+        <meta charset="utf-8">
+        <!-- Link to some stylesheet goes first -->
+        <link href="css/pirate.css" rel="stylesheet" type="text/css">
+		<!-- Link to hosted jQuery library goes after css file but before local js file -->
+        <!-- Probable performance boost if at very bottom of file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Link to js file specific to this html page goes below hosted library link -->
+        <script src="js/ahoyJQuery.js"></script>
+    </head>
+    
+    <body>
+        <h1>Text To Be Manipulated</h1>
+        <button id="replace" type = "button" title="replace">Replace</button>
+        <button id="append" type = "button" title="append">Append</button>
+
+        
+        <p>
+        	This paragraph tag exists so that I can play with it in jQuery
+        </p>
+    </body>
+
+</html>
+

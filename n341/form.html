@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cryptocurrency Form</title>
+	<link href="theme/jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- jQuery UI functionality -->
+<script type="text/javascript" src="theme/jquery-ui.js"></script>
+    
+    <script>
+    $( function() {
+    $( "#spinner" ).spinner({
+      step: 0.000001,
+      numberFormat: "n"
+    });
+ 
+    $( "#culture" ).on( "change", function() {
+      var current = $( "#spinner" ).spinner( "value" );
+      Globalize.culture( $(this).val() );
+      $( "#spinner" ).spinner( "value", current );
+    });
+  } );
+    </script>
+    
+</head>
+<body style="background:lightGrey">
+
+<h1>CryptoBooks!</h1>
+
+<div class="ui-widget">
+	<p>Learn and track your cryptocurrency here!</p>
+</div>
+
+<h1>Crypto Form:</h1>
+<form>
+<fieldset>
+    <h1>Personal Info</h1>
+    <p>
+        Name: <input title="Name" placeholder="Full Name" type="text" autofocus><br>
+    Email: <input title="Email" placeholder="email@example.com" type="email"><br>
+    Password: <input title="password" placeholder="password" type="password"><br>
+    Telephone Number: <input title="Telephone Number" placeholder="1(888)867-5309" type="tel"><br>
+    
+        
+    </p>
+    <!-- Accordion -->
+    <h2 class="demoHeaders">Coin Info</h2>
+    <div id="accordion">
+        <h3>Bitcoin</h3>
+        <div>Bitcoin is the first cryptocurrency made. Made by the mysterioys figure Satoshi Nakamoto, this brand new and exciting idea sparked what may be a revolution.</div>
+        <h3>Litecoin</h3>
+        <div>Litecoin is a version of Bitcoin that aims to be cheaper, faster and more agile sort of companion to Bitcoin (made about 2-3 years after Bitcoin).</div>
+        <h3>Ethereum</h3>
+        <div>A rather young cryptocurrency that is part of the "new generation" of cryptocurrency. Ethereum allows for the building of apps on itself as well as other uses outside of purchasing things.</div>
+    </div>
+    
+    <input id="checkbox" type="checkbox" name="I learned from this website." value="leanred"> I learned from this website!<br>
+
+    <!-- Datepicker -->
+    <h2 class="demoHeaders">Purchase Date</h2>
+    <div id="datepicker"></div>
+
+
+    
+    <!-- selector -->
+    <h2 class="demoHeaders">Coin</h2>
+    <select id="selectmenu">
+        <option selected="selected">Bitcoin</option>
+        <option>Litecoin</option>
+        <option>Ethereum</option>
+    </select>
+
+
+        <!-- Autocomplete -->
+    <h2 class="demoHeaders">Transaction Type</h2>
+    <div>
+        <input id="autocomplete" title="type &quot;a&quot;">
+    </div>
+
+
+    <!-- Spinner -->
+    <h2 class="demoHeaders">Amount Purchased</h2>
+    <input type="number" step="0.00000001" value="0.00000000" id="spinner"><br>
+
+    <!-- Checkboxradio -->
+<h2 class="demoHeaders">I would fill this form out again...</h2>
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">YES!</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Maybe</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Probably not</label>
+    </div>
+
+
+
+</fieldset>
+    
+    
+    <!-- Button -->
+    <button id="button" value="Submit" type="submit">Submit</button><br>
+    
+    <button id="reset" value="Reset" type="reset">Reset</button>
+    
+    
+</form>
+    
+    <p id="result"></p>
+    
+    
+<script src="theme/xternal/jquery/jquery.js"></script>
+<script src="theme/jquery-ui.js"></script>
+<script>
+
+$( "#accordion" ).accordion();
+
+
+
+var availableTags = [
+	"Buy",
+    "Sell",
+    "Withdraw",
+    "Deposit",
+    "Trade",
+    "Redemption",
+    "Gift",
+    "Other"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+
+
+$( "#button" ).button();
+$("#button").click(function(e){
+    alert("Form Submitted");
+})
+$( "#reset" ).button();
+
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+
+
+$( "#radioset" ).buttonset();
+
+
+
+$( "#controlgroup" ).controlgroup();
+
+
+
+$( "#tabs" ).tabs();
+
+
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+
+
+$( "#progressbar" ).progressbar({
+	value: 20
+});
+
+
+
+$( "#spinner" ).spinner();
+
+
+
+$( "#menu" ).menu();
+
+
+
+$( "#tooltip" ).tooltip();
+
+
+
+$( "#selectmenu" ).selectmenu();
+
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+</body>
+</html>

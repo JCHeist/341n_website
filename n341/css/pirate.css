@@ -1,0 +1,33 @@
+
+#greeting {
+    color: gray
+}
+
+#tables {
+    color: saddlebrown
+}
+
+#concatenation {
+    color: peru
+}
+
+#redbeard {
+    color: red
+}
+
+#captain_green {
+    color: green
+}
+
+#ship {
+    color: brown
+}
+
+body {
+    background-color: aqua
+}
+
+li, div {
+    font-weight: bold
+}
+

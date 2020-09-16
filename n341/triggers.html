@@ -1,0 +1,44 @@
+<!doctype html>
+
+<!--
+    Filename: triggers.html
+    Written by: Jasper Heist
+    Purpose: Learning jQuery
+    Date: 4/3/2019
+    Modification History: 
+    4/3/19 - date started
+-->
+
+<!-- Tested on google chrome and Safari -->
+
+<!-- if you do everything at once (resize it while its moving)... it still runs like butter on safari but it is can get super laggy on chrome -->
+
+
+<html lang="en">
+    <head>
+    
+        <title>jQuery Development Environment Setup</title>
+        <meta charset="utf-8">
+        <!-- Link to some stylesheet goes first -->
+        <link href="css/pirate.css" rel="stylesheet" type="text/css">
+		<!-- Link to hosted jQuery library goes after css file but before local js file -->
+        <!-- Probable performance boost if at very bottom of file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Link to js file specific to this html page goes below hosted library link -->
+        <script src="js/triggered.js"></script>
+    </head>
+    
+    <body>
+        <div id="textbox">
+            <ul>
+                <li id="height"></li>
+                <li id="width"></li>
+            </ul>
+            <p>User the arrowkeys to move around.</p>
+        </div>
+        
+    </body>
+
+</html>
+

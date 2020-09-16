@@ -1,0 +1,58 @@
+<!doctype html>
+
+<!--
+      Filename: pickMe.html
+    Written by: Jasper Heist
+    Purpose: Learning jQuery
+    Date: 3/27/2019
+    Modification History: 
+    3/27/19 - date started
+-->
+
+
+<html lang="en">
+    <head>
+    
+        <title>jQuery Development Environment Setup</title>
+        <meta charset="utf-8">
+        <!-- Link to some stylesheet goes first -->
+        <link href="css/pirate.css" rel="stylesheet" type="text/css">
+		<!-- Link to hosted jQuery library goes after css file but before local js file -->
+        <!-- Probable performance boost if at very bottom of file -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Link to js file specific to this html page goes below hosted library link -->
+        <script src="js/pickMe.js"></script>
+    </head>
+    
+    <body>
+        <h1 class = "apples" id = "tables">Header For page</h1>
+        <button id="sTag" type = "button" title="replace">Select Tag</button>
+        <button id="sClass" type = "button" title="append">Select Class</button>
+        <button id="sID" type = "button" title="replace">Select ID</button>
+        <button id="combo" type = "button" title="append">Combined</button>
+        <button id="sFTag" type = "button" title="replace">Filter Tag</button>
+        <button id="sFClass" type = "button" title="append">Filter Class</button>
+        <button id="sFID" type = "button" title="replace">Filter ID</button>
+        
+        <p id = "redbeard" >
+        	This paragraph tag exists so that I can play with it in jQuery
+        </p>
+        
+        <ul id = "unlist" class="unordered">
+            <li id="primero">an item</li>
+            <li id="segundo">another item</li>
+            <li id="tercer">Yet another item</li>
+            
+        </ul>
+        
+        <ol id = "orlist" class = "ordered">
+            <li id = "1st">First Item</li>
+            <li id = "2nd">Second Item</li>
+            <li id = "3rd">Third Item</li>
+        </ol>
+        
+    </body>
+
+</html>
+
